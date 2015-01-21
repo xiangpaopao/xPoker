@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+</head>
+<body>
+<div id="wp">
+    <div id="times">
+        <div class="time">3</div>
+        <div class="time">2</div>
+        <div class="time">1</div>
+        <div class="time">Go!</div>
+    </div>
+    <div id="pokers" class="pokers">
+        <% pokers.forEach(function (item, idx) { %>
+        <div class="item">
+            <div class="poker type<%-item.type%> num<%-item.num%>">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<div id="loading"></div>
+<script src="/public/javascripts/zepto.min.js"></script>
+<script>
+var pokers =  JSON.parse('<%- JSON.stringify(pokers)%>');
+console.log(pokers);
+</script>
+<script src="/public/javascripts/main.js"></script>
+</body>
+</html>

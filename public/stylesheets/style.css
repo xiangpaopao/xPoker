@@ -1,0 +1,208 @@
+html,body{margin: 0;padding: 0;height: 100%}
+body{background: url("/public/images/bg.jpg") repeat;font: 100% "Arial Narrow";overflow: hidden}
+#wp{width: 100%;height: 100%;background: url("/public/images/zh.png?2") top no-repeat;    background-size: contain;  }
+
+h3{color: #003300;width: 100%; text-align: center;top: 30%;position: absolute;font-size: 50px;}
+
+.poker{
+    width: 3.4rem;
+    height: 5.1rem;
+    position: absolute;
+    background-color: #fff;
+    background-image: url("/public/images/wb.jpg");
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 80px rgba(150, 100, 50, 0.5), 0 0 3px #966432;
+    box-shadow: inset 0 0 80px rgba(150, 100, 50, 0.5), 0 0 3px #966432;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translateZ(0deg);
+    -webkit-transform-origin:10% 110%;
+
+}
+.poker .shape:nth-of-type(1){
+    position: absolute;
+    top: 1.2rem;
+    left: .2rem;
+    width: .4rem;
+    height: .6rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.poker .shape:nth-of-type(2){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 1rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+.poker .shape:nth-of-type(3){
+    position: absolute;
+    bottom:1.2rem;
+    right: .2rem;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    width: .4rem;
+    height: .6rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.poker.type1,.poker.type3{
+    color: #a00;
+}
+.poker.type2,.poker.type4{
+    color: #222;
+}
+.poker.type1  .shape{
+    background-image: url("/public/images/hongtao.png");
+}
+.poker.type2  .shape{
+    background-image: url("/public/images/heitao.png");
+}
+.poker.type3  .shape{
+    background-image: url("/public/images/fangkuai.png");
+}
+.poker.type4  .shape{
+    background-image: url("/public/images/meihua.png");
+}
+.item{
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+    margin-left: -1.7rem;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+}
+.item:nth-of-type(1){
+    -webkit-animation-delay:3.5s;
+}
+.item:nth-of-type(2){
+    -webkit-animation-delay:4s;
+}
+.item:nth-of-type(3){
+    -webkit-animation-delay:4.5s;
+}
+.poker:before{
+    display: block;
+    position: absolute;
+    left: .15rem;
+    top: .1rem;
+}
+.poker:after{
+    position: absolute;
+    right: .15rem;
+    bottom: .1rem;
+    -webkit-transform: rotate(180deg);
+}
+.item:nth-of-type(1) .poker{
+    -webkit-transition: -webkit-transform .6s;
+    -webkit-transform:rotate(-2deg);
+}
+
+.item:nth-of-type(3) .poker{
+    -webkit-transition: -webkit-transform .6s;
+    -webkit-transform:rotate(2deg);
+}
+
+
+.open .item:nth-of-type(1) .poker{
+    -webkit-transform:rotate(-12deg);
+}
+.open .item:nth-of-type(3) .poker{
+    -webkit-transform:rotate(12deg);
+}
+#loading{background-image:url(/public/images/load.gif);height:64px;width: 64px;position: absolute;left: 50%;top: 40%;margin-left: -32px;background-size: contain; }
+
+.poker.num1:before,.poker.num1:after{content: "A"}
+.poker.num2:before,.poker.num2:after{content: "2"}
+.poker.num3:before,.poker.num3:after{content: "3"}
+.poker.num4:before,.poker.num4:after{content: "4"}
+.poker.num5:before,.poker.num5:after{content: "5"}
+.poker.num6:before,.poker.num6:after{content: "6"}
+.poker.num7:before,.poker.num7:after{content: "7"}
+.poker.num8:before,.poker.num8:after{content: "8"}
+.poker.num9:before,.poker.num9:after{content: "9"}
+.poker.num10:before,.poker.num10:after{content: "10"}
+.poker.num11:before,.poker.num11:after{content: "J"}
+.poker.num12:before,.poker.num12:after{content: "Q"}
+.poker.num13:before,.poker.num13:after{content: "K"}
+
+.time{
+    font-size:90px;
+    width: 100%;text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 32%;
+    z-index: 100;
+    opacity: 0;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+}
+
+.time:nth-of-type(1){
+}
+.time:nth-of-type(2){
+    -webkit-animation-delay: 1s;
+}
+.time:nth-of-type(3){
+    -webkit-animation-delay: 2s;
+}
+.time:nth-of-type(4){
+    -webkit-animation-delay: 3s;
+}
+
+
+/* animate */
+.zoomInDown {
+    -webkit-animation-name: zoomInDown;
+}
+@-webkit-keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -3000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    }
+
+   80% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.timesOut {
+    -webkit-animation-name: timesOut;
+}
+@-webkit-keyframes timesOut {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(10,10,10);
+    }
+
+    40% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.5,1.5,1.5);
+    }
+    70% {
+        opacity: 1;
+        -webkit-transform: scale3d(1,1,1);
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: scale3d(.5,.5,.5);
+    }
+}
