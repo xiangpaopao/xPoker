@@ -1,0 +1,76 @@
+html,body{margin: 0;padding: 0;}
+body{background: url("../images/bg.jpg") repeat;font: 100% "Arial Narrow";overflow: hidden}
+* {
+  text-decoration: none;
+  -webkit-user-select: none;
+}
+h3{color: #030;text-align: center;font-size: 40px;padding: 20px 0;margin: 0}
+.fix:after{display:block;content:'';clear:both;visibility:hidden}
+:root {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+#wp{width: 320px;margin: 0 auto;}
+.info{color: #fff;font-size: 22px;float: left; width: 96px;height: 48px;line-height: 48px;}
+.no{display: none;}
+.pg{margin: 10px 0;}
+.poker .shape:nth-of-type(1){
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    width: 24px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.poker .shape:nth-of-type(2){display: none;}
+.poker .shape:nth-of-type(3){display: none;}
+
+.poker.type1  .shape{
+    background-image: url("../images/hongtao.png");
+}
+.poker.type2  .shape{
+    background-image: url("../images/heitao.png");
+}
+.poker.type3  .shape{
+    background-image: url("../images/fangkuai.png");
+}
+.poker.type4  .shape{
+    background-image: url("../images/meihua.png");
+}
+
+.poker{
+    background-color: #fff;
+    background-image: url("../images/wb.png");
+    border-radius: 8px;
+    width: 68px;
+    height: 48px;
+    position: relative;
+}
+.poker.type1,.poker.type3{
+    color: #a00;
+}
+.poker.type2,.poker.type4{
+    color: #222;
+}
+.poker:after{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 30px;
+}
+.poker.num1:after{content: "A"}
+.poker.num2:after{content: "2"}
+.poker.num3:after{content: "3"}
+.poker.num4:after{content: "4"}
+.poker.num5:after{content: "5"}
+.poker.num6:after{content: "6"}
+.poker.num7:after{content: "7"}
+.poker.num8:after{content: "8"}
+.poker.num9:after{content: "9"}
+.poker.num10:after{content: "10"}
+.poker.num11:after{content: "J"}
+.poker.num12:after{content: "Q"}
+.poker.num13:after{content: "K"}
+.item{float: left;margin-right: 6px}

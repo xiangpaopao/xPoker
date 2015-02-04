@@ -55,7 +55,6 @@ Zepto(function($){
         $('.time').addClass('timesOut');
         $('.item').addClass('zoomInDown');
 
-
         $('#pokers').on('click',function(){
             $(this).toggleClass('open');
         })

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<h2>xPoker</h2>
+<h4>请扫描二维码</h4>
+<div id="erBox"></div>
+<script>
+    var url = location.href.replace(/index.html/, "") + 'game.html?t'+Date.parse(new Date());
+    document.getElementById('erBox').innerHTML = '<img src="http://qr.liantu.com/api.php?text='+url+'"/>';
+</script>
+</body>
+</html>
